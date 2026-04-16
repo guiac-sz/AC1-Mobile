@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/tituloTela"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Despesas Pessoais"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.022" />
+
+    <EditText
+        android:id="@+id/descricao"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:hint="Descrição"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTela" />
+
+    <Spinner
+        android:id="@+id/categoria"
+        android:layout_width="379dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTela" />
+
+    <EditText
+        android:id="@+id/valor"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="152dp"
+        android:hint="Valor"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTela" />
+
+    <EditText
+        android:id="@+id/data"
+        android:layout_width="400dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="216dp"
+        android:hint="Data"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.545"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTela" />
+
+    <Spinner
+        android:id="@+id/formaDePagamento"
+        android:layout_width="379dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="280dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.187"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tituloTela" />
+
+    <RadioGroup
+        android:id="@+id/statusGroup"
+        android:layout_width="379dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="264dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descricao">
+
+        <RadioButton
+            android:id="@+id/paga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Paga"
+            tools:layout_editor_absoluteX="97dp"
+            tools:layout_editor_absoluteY="500dp" />
+
+        <RadioButton
+            android:id="@+id/naoPaga"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Não Paga" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/salvar"
+        android:layout_width="379dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:text="Salvar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/statusGroup" />
+
+    <ListView
+        android:id="@+id/lista"
+        android:layout_width="380dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
+        app:layout_constraintStart_toStartOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
